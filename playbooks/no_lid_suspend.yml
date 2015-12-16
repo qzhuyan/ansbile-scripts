@@ -1,0 +1,5 @@
+- hosts: all
+  gather_facts: false
+  tasks:
+  - name: disable lid close suspend
+    lineinfile: dest=/etc/systemd/logind.conf line="HandleLidSwitch=ignore"
